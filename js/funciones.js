@@ -27,6 +27,68 @@ function CrearCarta(){
 
 
 
+
+
+
+
+
+
+
+function ValidarDatos(){
+    alert("hola");
+    var a=document.getElementById("nom");
+    var b=document.getElementById("email");
+    var c=document.getElementById("pass");
+    var d=parseInt(document.getElementById("edad")); 
+
+    if(a == null || a.length==0 || /^\s+$/.test(a))
+        {
+            alert('Error.. debe ingresar un nombre válido');
+            document.getElementById('nom').value="";
+            document.datos.nom.focus();
+            return false;
+        }
+
+    if(b == null || b.length==0 || /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/.test(b))
+        {
+            alert('Error.. debe ingresar un correo válido');
+            document.getElementById('email').value="";
+            document.datos.email.focus();
+            return false;
+        }
+    
+
+    if(c == null || c.length<8)
+        {
+            alert('Error.. debe ingresar una contraseña válida');
+            document.getElementById('pass').value="";
+            document.datos.pass.focus();
+            return false;
+        }
+
+    if(isNaN(d) || d<=0)
+        {
+           alert('Error...debe ingresar una edad válida');
+           document.getElementById('edad').value="";
+           document.datos.edad.focus();
+           return false;
+       }
+
+   return true;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
 function Validar(){
     var a=document.getElementById("nom");
     var b=document.getElementById("email");
@@ -54,4 +116,4 @@ function Validar(){
     }
     error.innerHTML = mensajesError.join(',');
     return true;
-}
+}*/

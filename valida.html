@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ejemplo de JavaScript - jQuery</title>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/estiloForm.css">
+  <script src="js/ValidaForm.js"></script>
+    
+</head>
+
+<body>
+    <div class="container">  
+        <form id="mi-Formulario" action="#">
+                <div class="form-group">
+                    <label for="nom">Nombre Usuario: </label>
+                    <input type="text" name="nom" id="nom" minlength="3" required placeholder="Cachupin Dog" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico: </label>
+                    <input type="text" name="email" id="email" required placeholder="nombre@dominio.cl" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="fono">Telefono: </label>
+                    <input type="number" name="fono" id="fono" minlength="9" required class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="fecha">Fecha: </label>
+                    <input type="date" name="fecha" id="fecha" min="1930-01-01" required class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="pass">Contraseña:</label>
+                    <input type="password" id="pass" name="pass" minlength="8" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label id="pass2">Reingresa contraseña: </label>
+                    <input type="password" name="pass2" id="pass2" minlength="8" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <input type="submit" value="Enviar" id="enviar" class="btn btn-success">   
+                </div>        
+        </form>
+       
+        
+    </div>
+</body>
+</html>
